@@ -19,8 +19,8 @@
 / {
     // NOTE: Use the `#define` settings below to customize this keymap!
     // For example, here are the main optional features you can enable:
-
     // 0:custom, 1:easy -> 5:hard (see below)
+
     #define DIFFICULTY_LEVEL 3
 
 
@@ -68,7 +68,7 @@
         // Alt, and Ctrl respectively in the Miryoku system) on home row keys.
         //
 
-#ifndef HOMEY_HOLDING_TYPE
+        #ifndef HOMEY_HOLDING_TYPE
 #define HOMEY_HOLDING_TYPE "tap-preferred"
 #endif
 
@@ -217,7 +217,8 @@
 
         left_pinky: homey_left_pinky {
             compatible = "zmk,behavior-hold-tap";
-            flavor = LEFT_PINKY_HOLDING_TYPE;
+            flavor =
+            LEFT_PINKY_HOLDING_TYPE;
             hold-trigger-key-positions = <6 7 8 9 10 11 18 19 21 20 23 22 30 31 32 33 34 35 36 37 38 39 40 41>;
             hold-trigger-on-release; // wait for other home row mods
             tapping-term-ms = <LEFT_PINKY_HOLDING_TIME>;
@@ -227,7 +228,7 @@
             bindings = <&kp>, <&kp>;
         };
 
-#ifndef RIGHT_PINKY_HOLDING_TYPE
+        #ifndef RIGHT_PINKY_HOLDING_TYPE
 #define RIGHT_PINKY_HOLDING_TYPE PINKY_HOLDING_TYPE
 #endif
 #ifndef RIGHT_PINKY_HOLDING_TIME
@@ -238,11 +239,14 @@
 #endif
 #ifndef RIGHT_PINKY_REPEAT_DECAY
 #define RIGHT_PINKY_REPEAT_DECAY PINKY_REPEAT_DECAY
-#endif
+#
+
+        endif
 
         right_pinky: homey_right_pinky {
             compatible = "zmk,behavior-hold-tap";
-            flavor = RIGHT_PINKY_HOLDING_TYPE;
+            flavor =
+            RIGHT_PINKY_HOLDING_TYPE;
             hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38 39 40 41>;
             hold-trigger-on-release; // wait for other home row mods
             tapping-term-ms = <RIGHT_PINKY_HOLDING_TIME>;
@@ -252,7 +256,7 @@
             bindings = <&kp>, <&kp>;
         };
 
-#ifndef LEFT_RING1_HOLDING_TYPE
+        #ifndef LEFT_RING1_HOLDING_TYPE
 #define LEFT_RING1_HOLDING_TYPE RING1_HOLDING_TYPE
 #endif
 #ifndef LEFT_RING1_HOLDING_TIME
@@ -263,11 +267,14 @@
 #endif
 #ifndef LEFT_RING1_REPEAT_DECAY
 #define LEFT_RING1_REPEAT_DECAY RING1_REPEAT_DECAY
-#endif
+#
+
+        endif
 
         left_ring1: homey_left_ring1 {
             compatible = "zmk,behavior-hold-tap";
-            flavor = LEFT_RING1_HOLDING_TYPE;
+            flavor =
+            LEFT_RING1_HOLDING_TYPE;
             hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 39 40 41 36 37 38>;
             hold-trigger-on-release; // wait for other home row mods
             tapping-term-ms = <LEFT_RING1_HOLDING_TIME>;
@@ -277,7 +284,7 @@
             bindings = <&kp>, <&kp>;
         };
 
-#ifndef RIGHT_RING1_HOLDING_TYPE
+        #ifndef RIGHT_RING1_HOLDING_TYPE
 #define RIGHT_RING1_HOLDING_TYPE RING1_HOLDING_TYPE
 #endif
 #ifndef RIGHT_RING1_HOLDING_TIME
@@ -288,11 +295,14 @@
 #endif
 #ifndef RIGHT_RING1_REPEAT_DECAY
 #define RIGHT_RING1_REPEAT_DECAY RING1_REPEAT_DECAY
-#endif
+#
+
+        endif
 
         right_ring1: homey_right_ring1 {
             compatible = "zmk,behavior-hold-tap";
-            flavor = RIGHT_RING1_HOLDING_TYPE;
+            flavor =
+            RIGHT_RING1_HOLDING_TYPE;
             hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38 39 40 41>;
             hold-trigger-on-release; // wait for other home row mods
             tapping-term-ms = <RIGHT_RING1_HOLDING_TIME>;
@@ -302,7 +312,7 @@
             bindings = <&kp>, <&kp>;
         };
 
-#ifndef LEFT_RING2_HOLDING_TYPE
+        #ifndef LEFT_RING2_HOLDING_TYPE
 #define LEFT_RING2_HOLDING_TYPE RING2_HOLDING_TYPE
 #endif
 #ifndef LEFT_RING2_HOLDING_TIME
@@ -313,11 +323,14 @@
 #endif
 #ifndef LEFT_RING2_REPEAT_DECAY
 #define LEFT_RING2_REPEAT_DECAY RING2_REPEAT_DECAY
-#endif
+#
+
+        endif
 
         left_ring2: homey_left_ring2 {
             compatible = "zmk,behavior-hold-tap";
-            flavor = LEFT_RING2_HOLDING_TYPE;
+            flavor =
+            LEFT_RING2_HOLDING_TYPE;
             hold-trigger-key-positions = <6 7 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 38 39 40 41 36 37 38>;
             hold-trigger-on-release; // wait for other home row mods
             tapping-term-ms = <LEFT_RING2_HOLDING_TIME>;
@@ -327,7 +340,7 @@
             bindings = <&kp>, <&kp>;
         };
 
-#ifndef RIGHT_RING2_HOLDING_TYPE
+        #ifndef RIGHT_RING2_HOLDING_TYPE
 #define RIGHT_RING2_HOLDING_TYPE RING2_HOLDING_TYPE
 #endif
 #ifndef RIGHT_RING2_HOLDING_TIME
@@ -338,11 +351,14 @@
 #endif
 #ifndef RIGHT_RING2_REPEAT_DECAY
 #define RIGHT_RING2_REPEAT_DECAY RING2_REPEAT_DECAY
-#endif
+#
+
+        endif
 
         right_ring2: homey_right_ring2 {
             compatible = "zmk,behavior-hold-tap";
-            flavor = RIGHT_RING2_HOLDING_TYPE;
+            flavor =
+            RIGHT_RING2_HOLDING_TYPE;
             hold-trigger-key-positions = <0 1 2 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38 39 40 41 3>;
             hold-trigger-on-release; // wait for other home row mods
             tapping-term-ms = <RIGHT_RING2_HOLDING_TIME>;
@@ -352,7 +368,7 @@
             bindings = <&kp>, <&kp>;
         };
 
-#ifndef LEFT_MIDDY_HOLDING_TYPE
+        #ifndef LEFT_MIDDY_HOLDING_TYPE
 #define LEFT_MIDDY_HOLDING_TYPE MIDDY_HOLDING_TYPE
 #endif
 #ifndef LEFT_MIDDY_HOLDING_TIME
@@ -363,11 +379,14 @@
 #endif
 #ifndef LEFT_MIDDY_REPEAT_DECAY
 #define LEFT_MIDDY_REPEAT_DECAY MIDDY_REPEAT_DECAY
-#endif
+#
+
+        endif
 
         left_middy: homey_left_middy {
             compatible = "zmk,behavior-hold-tap";
-            flavor = LEFT_MIDDY_HOLDING_TYPE;
+            flavor =
+            LEFT_MIDDY_HOLDING_TYPE;
             hold-trigger-key-positions = <6 7 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 39 40 41 8 37 38 36>;
             hold-trigger-on-release; // wait for other home row mods
             tapping-term-ms = <LEFT_MIDDY_HOLDING_TIME>;
@@ -377,7 +396,7 @@
             bindings = <&kp>, <&kp>;
         };
 
-#ifndef RIGHT_MIDDY_HOLDING_TYPE
+        #ifndef RIGHT_MIDDY_HOLDING_TYPE
 #define RIGHT_MIDDY_HOLDING_TYPE MIDDY_HOLDING_TYPE
 #endif
 #ifndef RIGHT_MIDDY_HOLDING_TIME
@@ -388,11 +407,14 @@
 #endif
 #ifndef RIGHT_MIDDY_REPEAT_DECAY
 #define RIGHT_MIDDY_REPEAT_DECAY MIDDY_REPEAT_DECAY
-#endif
+#
+
+        endif
 
         right_middy: homey_right_middy {
             compatible = "zmk,behavior-hold-tap";
-            flavor = RIGHT_MIDDY_HOLDING_TYPE;
+            flavor =
+            RIGHT_MIDDY_HOLDING_TYPE;
             hold-trigger-key-positions = <0 1 2 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38 3 39 40 41>;
             hold-trigger-on-release; // wait for other home row mods
             tapping-term-ms = <RIGHT_MIDDY_HOLDING_TIME>;
@@ -402,7 +424,7 @@
             bindings = <&kp>, <&kp>;
         };
 
-#ifndef LEFT_INDEX_HOLDING_TYPE
+        #ifndef LEFT_INDEX_HOLDING_TYPE
 #define LEFT_INDEX_HOLDING_TYPE INDEX_HOLDING_TYPE
 #endif
 #ifndef LEFT_INDEX_HOLDING_TIME
@@ -413,11 +435,14 @@
 #endif
 #ifndef LEFT_INDEX_REPEAT_DECAY
 #define LEFT_INDEX_REPEAT_DECAY INDEX_REPEAT_DECAY
-#endif
+#
+
+        endif
 
         left_index: homey_left_index {
             compatible = "zmk,behavior-hold-tap";
-            flavor = LEFT_INDEX_HOLDING_TYPE;
+            flavor =
+            LEFT_INDEX_HOLDING_TYPE;
             hold-trigger-key-positions = <6 7 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 39 40 41 8 36 37 38>;
             hold-trigger-on-release; // wait for other home row mods
             tapping-term-ms = <LEFT_INDEX_HOLDING_TIME>;
@@ -427,7 +452,7 @@
             bindings = <&kp>, <&kp>;
         };
 
-#ifndef RIGHT_INDEX_HOLDING_TYPE
+        #ifndef RIGHT_INDEX_HOLDING_TYPE
 #define RIGHT_INDEX_HOLDING_TYPE INDEX_HOLDING_TYPE
 #endif
 #ifndef RIGHT_INDEX_HOLDING_TIME
@@ -438,11 +463,14 @@
 #endif
 #ifndef RIGHT_INDEX_REPEAT_DECAY
 #define RIGHT_INDEX_REPEAT_DECAY INDEX_REPEAT_DECAY
-#endif
+#
+
+        endif
 
         right_index: homey_right_index {
             compatible = "zmk,behavior-hold-tap";
-            flavor = RIGHT_INDEX_HOLDING_TYPE;
+            flavor =
+            RIGHT_INDEX_HOLDING_TYPE;
             hold-trigger-key-positions = <0 1 2 3 4 5 15 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38 39 40 41>;
             hold-trigger-on-release; // wait for other home row mods
             tapping-term-ms = <RIGHT_INDEX_HOLDING_TIME>;
@@ -467,10 +495,10 @@
 
             display-name = "Base";
             bindings = <
-&kp TAB    &kp Q               &left_ring2 RALT W  &kp E                &kp R                     &kp T        &kp Y    &kp U                 &kp I                 &right_ring2 RALT O  &kp P                   &kp BSPC
-&kp LCTRL  &left_pinky LGUI A  &left_ring1 LALT S  &left_middy LCTRL D  &left_index LEFT_SHIFT F  &kp G        &kp H    &right_index LSHFT J  &right_middy LCTRL K  &right_ring1 LALT L  &right_pinky LGUI SEMI  &kp SQT
-&kp LSHFT  &kp Z               &kp X               &kp C                &kp V                     &kp B        &kp N    &kp M                 &kp COMMA             &kp DOT              &kp FSLH                &kp ESC
-                                                   &kp LGUI             &mo LAYER_lower           &kp SPACE    &kp RET  &mo LAYER_raise       &kp RALT
+&kp TAB  &kp Q               &left_ring2 RALT W  &kp E                &kp R                     &kp T        &kp Y      &kp U                 &kp I                 &right_ring2 RALT O  &kp P                   &none
+&none    &left_pinky LGUI A  &left_ring1 LALT S  &left_middy LCTRL D  &left_index LEFT_SHIFT F  &kp G        &kp H      &right_index LSHFT J  &right_middy LCTRL K  &right_ring1 LALT L  &right_pinky LGUI SEMI  &none
+&none    &kp Z               &kp X               &kp C                &kp V                     &kp B        &kp N      &kp M                 &kp COMMA             &kp DOT              &kp FSLH                &none
+                                                 &mo 1                &kp BACKSPACE             &kp SPACE    &kp SPACE  &kp ENTER             &none
             >;
         };
 
@@ -483,10 +511,10 @@
 
             display-name = "Lower";
             bindings = <
-&kp TAB     &kp N1        &kp N2        &kp N3        &kp N4        &kp N5          &kp N6    &kp N7    &kp N8    &kp N9     &kp N0  &kp BSPC
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT  &trans  &trans
-&kp LSHFT   &trans        &trans        &trans        &trans        &trans          &trans    &trans    &trans    &trans     &trans  &trans
-                                        &kp LGUI      &trans        &kp SPACE       &kp RET   &trans    &kp RALT
+&none       &none         &none         &none         &none         &none           &none   &none   &none   &none   &none   &none
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &none   &none   &none   &none   &trans  &trans
+&none       &trans        &trans        &trans        &trans        &trans          &trans  &trans  &trans  &trans  &trans  &trans
+                                        &none         &trans        &none           &none   &trans  &none
             >;
         };
 
