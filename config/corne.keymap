@@ -232,7 +232,7 @@
             compatible = "zmk,behavior-hold-tap";
             flavor =
             RIGHT_PINKY_HOLDING_TYPE;
-            hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38 39 40 41>;
+            hold-trigger-key-positions = <LEFT_HAND_KEYS ALL_THUMB_KEYS>;
             hold-trigger-on-release; // wait for other home row mods
             tapping-term-ms = <RIGHT_PINKY_HOLDING_TIME>;
             quick-tap-ms = <RIGHT_PINKY_REPEAT_DECAY>;
@@ -245,7 +245,7 @@
             compatible = "zmk,behavior-hold-tap";
             flavor =
             LEFT_RING1_HOLDING_TYPE;
-            hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 39 40 41 36 37 38>;
+            hold-trigger-key-positions = <RIGHT_HAND_KEYS ALL_THUMB_KEYS>;
             hold-trigger-on-release; // wait for other home row mods
             tapping-term-ms = <LEFT_RING1_HOLDING_TIME>;
             quick-tap-ms = <LEFT_RING1_REPEAT_DECAY>;
@@ -258,7 +258,7 @@
             compatible = "zmk,behavior-hold-tap";
             flavor =
             RIGHT_RING1_HOLDING_TYPE;
-            hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38 39 40 41>;
+            hold-trigger-key-positions = <LEFT_HAND_KEYS ALL_THUMB_KEYS>;
             hold-trigger-on-release; // wait for other home row mods
             tapping-term-ms = <RIGHT_RING1_HOLDING_TIME>;
             quick-tap-ms = <RIGHT_RING1_REPEAT_DECAY>;
@@ -267,12 +267,11 @@
             bindings = <&kp>, <&kp>;
         };
 
-
         left_ring2: homey_left_ring2 {
             compatible = "zmk,behavior-hold-tap";
             flavor =
             LEFT_RING2_HOLDING_TYPE;
-            hold-trigger-key-positions = <6 7 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 38 39 40 41 36 37 38>;
+            hold-trigger-key-positions = <RIGHT_HAND_KEYS ALL_THUMB_KEYS>;
             hold-trigger-on-release; // wait for other home row mods
             tapping-term-ms = <LEFT_RING2_HOLDING_TIME>;
             quick-tap-ms = <LEFT_RING2_REPEAT_DECAY>;
@@ -281,12 +280,11 @@
             bindings = <&kp>, <&kp>;
         };
 
-
         right_ring2: homey_right_ring2 {
             compatible = "zmk,behavior-hold-tap";
             flavor =
             RIGHT_RING2_HOLDING_TYPE;
-            hold-trigger-key-positions = <0 1 2 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38 39 40 41 3>;
+            hold-trigger-key-positions = <LEFT_HAND_KEYS ALL_THUMB_KEYS>;
             hold-trigger-on-release; // wait for other home row mods
             tapping-term-ms = <RIGHT_RING2_HOLDING_TIME>;
             quick-tap-ms = <RIGHT_RING2_REPEAT_DECAY>;
@@ -295,12 +293,11 @@
             bindings = <&kp>, <&kp>;
         };
 
-
         left_middy: homey_left_middy {
             compatible = "zmk,behavior-hold-tap";
             flavor =
             LEFT_MIDDY_HOLDING_TYPE;
-            hold-trigger-key-positions = <6 7 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 39 40 41 8 37 38 36>;
+            hold-trigger-key-positions = <RIGHT_HAND_KEYS ALL_THUMB_KEYS>;
             hold-trigger-on-release; // wait for other home row mods
             tapping-term-ms = <LEFT_MIDDY_HOLDING_TIME>;
             quick-tap-ms = <LEFT_MIDDY_REPEAT_DECAY>;
@@ -309,12 +306,11 @@
             bindings = <&kp>, <&kp>;
         };
 
-
         right_middy: homey_right_middy {
             compatible = "zmk,behavior-hold-tap";
             flavor =
             RIGHT_MIDDY_HOLDING_TYPE;
-            hold-trigger-key-positions = <0 1 2 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38 3 39 40 41>;
+            hold-trigger-key-positions = <LEFT_HAND_KEYS ALL_THUMB_KEYS>;
             hold-trigger-on-release; // wait for other home row mods
             tapping-term-ms = <RIGHT_MIDDY_HOLDING_TIME>;
             quick-tap-ms = <RIGHT_MIDDY_REPEAT_DECAY>;
@@ -323,12 +319,11 @@
             bindings = <&kp>, <&kp>;
         };
 
-
         left_index: homey_left_index {
             compatible = "zmk,behavior-hold-tap";
             flavor =
             LEFT_INDEX_HOLDING_TYPE;
-            hold-trigger-key-positions = <6 7 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 39 40 41 8 36 37 38>;
+            hold-trigger-key-positions = <RIGHT_HAND_KEYS ALL_THUMB_KEYS>;
             hold-trigger-on-release; // wait for other home row mods
             tapping-term-ms = <LEFT_INDEX_HOLDING_TIME>;
             quick-tap-ms = <LEFT_INDEX_REPEAT_DECAY>;
@@ -337,12 +332,11 @@
             bindings = <&kp>, <&kp>;
         };
 
-
         right_index: homey_right_index {
             compatible = "zmk,behavior-hold-tap";
             flavor =
             RIGHT_INDEX_HOLDING_TYPE;
-            hold-trigger-key-positions = <0 1 2 3 4 5 15 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38 39 40 41>;
+            hold-trigger-key-positions = <LEFT_HAND_KEYS ALL_THUMB_KEYS>;
             hold-trigger-on-release; // wait for other home row mods
             tapping-term-ms = <RIGHT_INDEX_HOLDING_TIME>;
             quick-tap-ms = <RIGHT_INDEX_REPEAT_DECAY>;
