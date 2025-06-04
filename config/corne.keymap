@@ -7,6 +7,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/pointing.h>
 
 #define LAYER_default 0
 #define LAYER_lower 1
@@ -14,7 +15,7 @@
 #define LAYER_accents 3
 #define LAYER_cap_accents 4
 #define LAYER_navnum 5
-
+#define LAYER_functions 6
 
 / {
 
@@ -520,10 +521,10 @@
 
             display-name = "Base";
             bindings = <
-&kp TAB  &kp Q               &left_ring2 RALT SQT  &kp E                &kp R                       &kp RBKT     &kp LBKT   &kp U                   &kp I                 &right_ring2 RALT O  &kp P                   &none
-&none    &left_pinky LGUI A  &left_ring1 LALT S    &left_middy LCTRL D  &left_index LEFT_SHIFT F    &kp G        &kp H      &right_index LSHFT J    &right_middy LCTRL K  &right_ring1 LALT L  &right_pinky LGUI SEMI  &none
-&none    &kp Z               &kp X                 &kp C                &lt LAYER_symbol V          &kp B        &deadkey   &lt LAYER_symbol M      &kp COMMA             &kp DOT              &kp FSLH                &none
-                                                   &mo LAYER_lower      &lt LAYER_navnum BACKSPACE  &kp SPACE    &kp SPACE  &lt LAYER_navnum ENTER  &none
+&kp TAB  &kp Q               &left_ring2 RALT SQT  &kp E                &kp R                       &kp RBKT                     &kp LBKT     &kp U                   &kp I                 &right_ring2 RALT O  &kp P                   &none
+&none    &left_pinky LGUI A  &left_ring1 LALT S    &left_middy LCTRL D  &left_index LEFT_SHIFT F    &kp G                        &kp H        &right_index LSHFT J    &right_middy LCTRL K  &right_ring1 LALT L  &right_pinky LGUI SEMI  &none
+&none    &kp Z               &kp X                 &kp C                &lt LAYER_symbol V          &kp B                        &deadkey     &lt LAYER_symbol M      &kp COMMA             &kp DOT              &kp FSLH                &none
+                                                   &mo LAYER_lower      &lt LAYER_navnum BACKSPACE  &lt LAYER_functions SPACE    &lt 6 SPACE  &lt LAYER_navnum ENTER  &none
             >;
         };
 
@@ -588,5 +589,16 @@
                                               &trans          &trans           &trans                &trans        &trans        &trans
 						>;
 				};
+
+				fn_layer {
+						display-name = "Functions";
+            bindings = <
+  &none  &kp F1   &kp F2     &kp F3   &kp F4   &kp F5          &kp F6          &kp F7          &kp F8          &kp F9           &kp F10          &none
+  &none  &kp INS  &kp PSCRN  &none    &none    &none           &none           &mkp LCLK       &mmv MOVE_UP    &mkp RCLK        &mkp MCLK        &msc SCRL_UP
+  &none  &none    &none      &kp F11  &kp F12  &none           &msc SCRL_LEFT  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_RIGHT  &msc SCRL_DOWN
+                             &none    &kp DEL  &none           &none           &none           &kp ESC
+							>;
+        };
+
     };
 };
