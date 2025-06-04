@@ -363,8 +363,8 @@
             bindings = <
 &kp TAB  &kp Q               &left_ring2 RALT W  &kp E                &kp R                     &kp T        &kp Y      &kp U                 &kp I                 &right_ring2 RALT O  &kp P                   &none
 &none    &left_pinky LGUI A  &left_ring1 LALT S  &left_middy LCTRL D  &left_index LEFT_SHIFT F  &kp G        &kp H      &right_index LSHFT J  &right_middy LCTRL K  &right_ring1 LALT L  &right_pinky LGUI SEMI  &none
-&none    &kp Z               &kp X               &kp C                &kp V                     &kp B        &kp N      &kp M                 &kp COMMA             &kp DOT              &kp FSLH                &none
-                                                 &mo 1                &kp BACKSPACE             &kp SPACE    &kp SPACE  &kp ENTER             &none
+&none    &kp Z               &kp X               &kp C                &lt LAYER_raise V         &kp B        &kp N      &lt LAYER_raise M     &kp COMMA             &kp DOT              &kp FSLH                &none
+                                                 &mo LAYER_lower      &kp BACKSPACE             &kp SPACE    &kp SPACE  &kp ENTER             &none
             >;
         };
 
@@ -393,9 +393,9 @@
 
             display-name = "Raise";
             bindings = <
- &none   &none   &none   &none   &none   &none  &none   &none   &none   &none   &none   &none
- &none   &none   &none   &none   &none   &none  &none   &none   &none   &none   &none   &none
- &none   &none   &none   &none   &none   &none  &none   &none   &none   &none   &none   &none
+ &none   &kp Y   &kp RA(N2)    &kp RA(N3)      &kp GRAVE      &kp EQUAL &kp N6  &kp RA(E)     &kp N0      &kp N  &kp LS(EQUAL)  &none
+ &none  &kp RA(X)      &kp N4      &kp N5      &kp RA(C)      &kp MINUS &kp RA(Z)     &kp N7     &kp N8     &kp N9         &kp N1   &none
+ &none  &kp RA(B)  &kp RA(N4)  &kp RA(N5)  &kp RA(SPACE)  &kp RS(GRAVE)  &kp RA(Q)  &kp LS(Y)  &kp LS(G)  &kp LS(V)      &kp LS(N)   &none
                          &none   &none   &none  &none   &none   &none
             >;
         };
