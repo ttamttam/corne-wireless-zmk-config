@@ -212,8 +212,7 @@
 
         left_pinky: homey_left_pinky {
             compatible = "zmk,behavior-hold-tap";
-            flavor =
-            LEFT_PINKY_HOLDING_TYPE;
+            flavor = LEFT_PINKY_HOLDING_TYPE;
             hold-trigger-key-positions = <RIGHT_HAND_KEYS ALL_THUMB_KEYS>;
             hold-trigger-on-release; // wait for other home row mods
             tapping-term-ms = <LEFT_PINKY_HOLDING_TIME>;
@@ -225,8 +224,7 @@
 
         right_pinky: homey_right_pinky {
             compatible = "zmk,behavior-hold-tap";
-            flavor =
-            RIGHT_PINKY_HOLDING_TYPE;
+            flavor = RIGHT_PINKY_HOLDING_TYPE;
             hold-trigger-key-positions = <LEFT_HAND_KEYS ALL_THUMB_KEYS>;
             hold-trigger-on-release; // wait for other home row mods
             tapping-term-ms = <RIGHT_PINKY_HOLDING_TIME>;
@@ -238,8 +236,7 @@
 
         left_ring1: homey_left_ring1 {
             compatible = "zmk,behavior-hold-tap";
-            flavor =
-            LEFT_RING1_HOLDING_TYPE;
+            flavor = LEFT_RING1_HOLDING_TYPE;
             hold-trigger-key-positions = <RIGHT_HAND_KEYS ALL_THUMB_KEYS>;
             hold-trigger-on-release; // wait for other home row mods
             tapping-term-ms = <LEFT_RING1_HOLDING_TIME>;
@@ -251,8 +248,7 @@
 
         right_ring1: homey_right_ring1 {
             compatible = "zmk,behavior-hold-tap";
-            flavor =
-            RIGHT_RING1_HOLDING_TYPE;
+            flavor = RIGHT_RING1_HOLDING_TYPE;
             hold-trigger-key-positions = <LEFT_HAND_KEYS ALL_THUMB_KEYS>;
             hold-trigger-on-release; // wait for other home row mods
             tapping-term-ms = <RIGHT_RING1_HOLDING_TIME>;
@@ -277,8 +273,7 @@
 
         right_ring2: homey_right_ring2 {
             compatible = "zmk,behavior-hold-tap";
-            flavor =
-            RIGHT_RING2_HOLDING_TYPE;
+            flavor = RIGHT_RING2_HOLDING_TYPE;
             hold-trigger-key-positions = <LEFT_HAND_KEYS ALL_THUMB_KEYS>;
             hold-trigger-on-release; // wait for other home row mods
             tapping-term-ms = <RIGHT_RING2_HOLDING_TIME>;
@@ -303,8 +298,7 @@
 
         right_middy: homey_right_middy {
             compatible = "zmk,behavior-hold-tap";
-            flavor =
-            RIGHT_MIDDY_HOLDING_TYPE;
+            flavor = RIGHT_MIDDY_HOLDING_TYPE;
             hold-trigger-key-positions = <LEFT_HAND_KEYS ALL_THUMB_KEYS>;
             hold-trigger-on-release; // wait for other home row mods
             tapping-term-ms = <RIGHT_MIDDY_HOLDING_TIME>;
@@ -316,8 +310,7 @@
 
         left_index: homey_left_index {
             compatible = "zmk,behavior-hold-tap";
-            flavor =
-            LEFT_INDEX_HOLDING_TYPE;
+            flavor = LEFT_INDEX_HOLDING_TYPE;
             hold-trigger-key-positions = <RIGHT_HAND_KEYS ALL_THUMB_KEYS>;
             hold-trigger-on-release; // wait for other home row mods
             tapping-term-ms = <LEFT_INDEX_HOLDING_TIME>;
@@ -329,8 +322,7 @@
 
         right_index: homey_right_index {
             compatible = "zmk,behavior-hold-tap";
-            flavor =
-            RIGHT_INDEX_HOLDING_TYPE;
+            flavor = RIGHT_INDEX_HOLDING_TYPE;
             hold-trigger-key-positions = <LEFT_HAND_KEYS ALL_THUMB_KEYS>;
             hold-trigger-on-release; // wait for other home row mods
             tapping-term-ms = <RIGHT_INDEX_HOLDING_TIME>;
@@ -350,7 +342,7 @@
         right_index_accents: homey_right_index_accents {
             compatible = "zmk,behavior-hold-tap";
             flavor = RIGHT_INDEX_HOLDING_TYPE;
-            hold-trigger-key-positions = <LEFT_HAND_KEYS THUMB_KEYS>;
+            hold-trigger-key-positions = <LEFT_HAND_KEYS ALL_THUMB_KEYS>;
             hold-trigger-on-release; // wait for other home row mods
             tapping-term-ms = <RIGHT_INDEX_HOLDING_TIME>;
             quick-tap-ms = <RIGHT_INDEX_REPEAT_DECAY>;
@@ -362,7 +354,7 @@
         left_index_accents: homey_left_index_accents {
             compatible = "zmk,behavior-hold-tap";
             flavor = LEFT_INDEX_HOLDING_TYPE;
-            hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>;
+            hold-trigger-key-positions = <RIGHT_HAND_KEYS ALL_THUMB_KEYS>;
             hold-trigger-on-release; // wait for other home row mods
             tapping-term-ms = <LEFT_INDEX_HOLDING_TIME>;
             quick-tap-ms = <LEFT_INDEX_REPEAT_DECAY>;
