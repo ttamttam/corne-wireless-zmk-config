@@ -12,10 +12,8 @@
 #define LAYER_default 0
 #define LAYER_lower 1
 #define LAYER_symbol 2
-#define LAYER_accents 3
-#define LAYER_cap_accents 4
-#define LAYER_navnum 5
-#define LAYER_functions 6
+#define LAYER_navnum 3
+#define LAYER_functions 4
 
 / {
 
@@ -333,180 +331,8 @@
             bindings = <&kp>, <&kp>;
         };
 
-        deadkey: deadkey {
-		       compatible = "zmk,behavior-mod-morph";
-           #binding-cells = <0>;
-           bindings = <&sl LAYER_accents>, <&kp N3>;
-           mods = <(MOD_RALT)>;
-        };
-
-        right_index_accents: homey_right_index_accents {
-            compatible = "zmk,behavior-hold-tap";
-            flavor = RIGHT_INDEX_HOLDING_TYPE;
-            hold-trigger-key-positions = <LEFT_HAND_KEYS ALL_THUMB_KEYS>;
-            hold-trigger-on-release; // wait for other home row mods
-            tapping-term-ms = <RIGHT_INDEX_HOLDING_TIME>;
-            quick-tap-ms = <RIGHT_INDEX_REPEAT_DECAY>;
-            require-prior-idle-ms = <RIGHT_INDEX_STREAK_DECAY>;
-            #binding-cells = <2>;
-            bindings = <&mo>, <&kp>;
-        };
-
-        left_index_accents: homey_left_index_accents {
-            compatible = "zmk,behavior-hold-tap";
-            flavor = LEFT_INDEX_HOLDING_TYPE;
-            hold-trigger-key-positions = <RIGHT_HAND_KEYS ALL_THUMB_KEYS>;
-            hold-trigger-on-release; // wait for other home row mods
-            tapping-term-ms = <LEFT_INDEX_HOLDING_TIME>;
-            quick-tap-ms = <LEFT_INDEX_REPEAT_DECAY>;
-            require-prior-idle-ms = <LEFT_INDEX_STREAK_DECAY>;
-            #binding-cells = <2>;
-            bindings = <&mo>, <&kp>;
-         };
     };
 };
-
-/ {
-    macros {
-
-        a_circ: a_circ {
-            label = "&A_CIRC";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_tap>
-                , <&kp Y>
-                , <&kp A>;
-        };
-
-        u_circ: u_circ {
-            label = "&U_CIRC";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_tap>
-                , <&kp Y>
-                , <&kp S>;
-        };
-
-        i_circ: i_circ {
-            label = "&I_CIRC";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_tap>
-                , <&kp Y>
-                , <&kp D>;
-        };
-
-        o_circ: o_circ {
-            label = "&O_CIRC";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_tap>
-                , <&kp Y>
-                , <&kp R>;
-        };
-
-        e_circ: e_circ {
-            label = "&E_CIRC";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_tap>
-                , <&kp Y>
-                , <&kp F>;
-        };
-
-        a_cap_circ: a_cap_circ {
-            label = "&A_CAP_CIRC";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_tap>
-                , <&kp Y>
-                , <&kp RS(A)>;
-        };
-
-        u_cap_circ: u_cap_circ {
-            label = "&U_CAP_CIRC";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_tap>
-                , <&kp Y>
-                , <&kp RS(S)>;
-        };
-
-        i_cap_circ: i_cap_circ {
-            label = "&I_CAP_CIRC";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_tap>
-                , <&kp Y>
-                , <&kp RS(D)>;
-        };
-
-        o_cap_circ: o_cap_circ {
-            label = "&O_CAP_CIRC";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_tap>
-                , <&kp Y>
-                , <&kp RS(R)>;
-        };
-
-        e_cap_circ: e_cap_circ {
-            label = "&E_CAP_CIRC";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_tap>
-                , <&kp Y>
-                , <&kp RS(F)>;
-        };
-
-        c_cedilla_cap: c_cedilla_cap {
-            label = "&C_CEDILLA_CAP";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LS(BSLH)>;
-        };
-
-        a_grave_cap: a_grave_cap {
-            label = "&A_GRAVE_CAP";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LS(Z)>;
-        };
-
-        oe_cap: oe_cap {
-            label = "&OE_CAP";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp RS(RA(R))>;
-        };
-
-        u_grave_cap: u_grave_cap {
-            label = "&U_GRAVE_CAP";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LS(RA(S))>;
-        };
-
-        e_acute_cap: e_acute_cap {
-            label = "&E_ACUTE_CAP";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LS(W)>;
-        };
-
-        e_grave_cap: e_grave_cap {
-            label = "&E_GRAVE_CAP";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LS(T)>;
-        };
-    };
-};
-
-
-
-
-
 
 / {
     keymap {
@@ -523,7 +349,7 @@
             bindings = <
 &kp TAB  &kp Q               &left_ring2 RALT W    &kp E                &kp R                       &kp T                        &kp Y        &kp U                   &kp I                 &right_ring2 RALT O  &kp P                   &kp RBKT
 &kp ESC  &left_pinky LGUI A  &left_ring1 LALT S    &left_middy LCTRL D  &left_index LEFT_SHIFT F    &kp G                        &kp H        &right_index LSHFT J    &right_middy LCTRL K  &right_ring1 LALT L  &right_pinky LGUI SEMI  &kp SQT
-&kp DEL  &kp Z               &kp X                 &kp C                &lt LAYER_symbol V          &kp B                        &deadkey     &lt LAYER_symbol M      &kp COMMA             &kp DOT              &kp FSLH                &kp LBKT
+&kp DEL  &kp Z               &kp X                 &kp C                &lt LAYER_symbol V          &kp B                        &kp N        &lt LAYER_symbol M      &kp COMMA             &kp DOT              &kp FSLH                &kp LBKT
                                                    &mo LAYER_lower      &lt LAYER_navnum BACKSPACE  &lt LAYER_functions SPACE    &lt 6 SPACE  &lt LAYER_navnum ENTER  &none
             >;
         };
@@ -557,26 +383,6 @@
  &none  &kp RA(X)  &kp N4      &kp N5      &kp RA(C)      &kp MINUS      &kp RA(Z)  &kp N7     &kp N8     &kp N9     &kp N1         &none
  &none  &kp RA(B)  &kp RA(N4)  &kp RA(N5)  &kp RA(SPACE)  &kp RS(GRAVE)  &kp RA(Q)  &kp LS(Y)  &kp LS(G)  &kp LS(V)  &kp LS(N)      &none
                                &none       &none          &none          &none      &none      &none
-            >;
-        };
-
-        accents_layer {
-            display-name = "Accents";
-            bindings = <
-  &none   &a_circ    &u_circ    &i_circ  &o_circ                                    &kp RA(R)    &none                                         &none   &none   &none   &none   &none
-  &none   &kp Z      &kp RA(S)  &kp W    &left_index_accents LAYER_cap_accents T    &e_circ      &none  &right_index_accents LAYER_cap_accents &none   &none   &none   &none   &none
-  &none   &kp BSLH   &none      &none    &none                                      &none        &none                                         &none   &none   &none   &none   &none
-                                &none    &none                                      &none        &none                                         &none   &none
-            >;
-        };
-
-        cap_accents_layer {
-					            display-name = "Accents majuscules";
-            bindings = <
-  &none  &a_cap_circ     &u_cap_circ   &i_cap_circ   &o_cap_circ   &oe_cap       &none   &none   &none   &none   &none   &none
-  &none  &a_grave_cap    &u_grave_cap  &e_acute_cap  &e_grave_cap  &e_cap_circ   &none   &none   &none   &none   &none   &none
-  &none  &c_cedilla_cap  &none         &none         &none         &none         &none   &none   &none   &none   &none   &none
-                                       &none         &none         &none         &none   &none   &none
             >;
         };
 
