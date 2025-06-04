@@ -347,10 +347,10 @@
 
             display-name = "Base";
             bindings = <
-&kp TAB  &kp Q               &left_ring2 RALT W    &kp E                &kp R                       &kp T                        &kp Y        &kp U                   &kp I                 &right_ring2 RALT O  &kp P                   &kp RBKT
-&kp ESC  &left_pinky LGUI A  &left_ring1 LALT S    &left_middy LCTRL D  &left_index LEFT_SHIFT F    &kp G                        &kp H        &right_index LSHFT J    &right_middy LCTRL K  &right_ring1 LALT L  &right_pinky LGUI SEMI  &kp SQT
-&kp DEL  &kp Z               &kp X                 &kp C                &lt LAYER_symbol V          &kp B                        &kp N        &lt LAYER_symbol M      &kp COMMA             &kp DOT              &kp FSLH                &kp LBKT
-                                                   &mo LAYER_lower      &lt LAYER_navnum BACKSPACE  &lt LAYER_functions SPACE    &lt 6 SPACE  &lt LAYER_navnum ENTER  &none
+&kp TAB  &kp Q               &left_ring2 RALT W    &kp E                &kp R                       &kp T                        &kp Y                      &kp U                   &kp I                 &right_ring2 RALT O  &kp P                   &kp RBKT
+&kp ESC  &left_pinky LGUI A  &left_ring1 LALT S    &left_middy LCTRL D  &left_index LEFT_SHIFT F    &kp G                        &kp H                      &right_index LSHFT J    &right_middy LCTRL K  &right_ring1 LALT L  &right_pinky LGUI SEMI  &kp SQT
+&kp DEL  &kp Z               &kp X                 &kp C                &lt LAYER_symbol V          &kp B                        &kp N                      &lt LAYER_symbol M      &kp COMMA             &kp DOT              &kp FSLH                &kp LBKT
+                                                   &mo LAYER_lower      &lt LAYER_navnum BACKSPACE  &lt LAYER_functions SPACE    &lt LAYER_functions SPACE  &lt LAYER_navnum ENTER  &none
             >;
         };
 
