@@ -10,11 +10,11 @@
 
 #define LAYER_default 0
 #define LAYER_lower 1
-#define LAYER_raise 2
+#define LAYER_symbol 2
 #define LAYER_accents 3
 #define LAYER_cap_accents 4
-#define LAYER_extra_3 5
-#define LAYER_mouse 6
+#define LAYER_navnum 5
+
 
 / {
 
@@ -502,6 +502,11 @@
     };
 };
 
+
+
+
+
+
 / {
     keymap {
         compatible = "zmk,keymap";
@@ -515,10 +520,10 @@
 
             display-name = "Base";
             bindings = <
-&kp TAB  &kp Q               &left_ring2 RALT SQT  &kp E                &kp R                     &kp RBKT     &kp LBKT   &kp U                 &kp I                 &right_ring2 RALT O  &kp P                   &none
-&none    &left_pinky LGUI A  &left_ring1 LALT S    &left_middy LCTRL D  &left_index LEFT_SHIFT F  &kp G        &kp H      &right_index LSHFT J  &right_middy LCTRL K  &right_ring1 LALT L  &right_pinky LGUI SEMI  &none
-&none    &kp Z               &kp X                 &kp C                &lt LAYER_raise V         &kp B        &deadkey   &lt LAYER_raise M     &kp COMMA             &kp DOT              &kp FSLH                &none
-                                                   &mo LAYER_lower      &kp BACKSPACE             &kp SPACE    &kp SPACE  &kp ENTER             &none
+&kp TAB  &kp Q               &left_ring2 RALT SQT  &kp E                &kp R                       &kp RBKT     &kp LBKT   &kp U                   &kp I                 &right_ring2 RALT O  &kp P                   &none
+&none    &left_pinky LGUI A  &left_ring1 LALT S    &left_middy LCTRL D  &left_index LEFT_SHIFT F    &kp G        &kp H      &right_index LSHFT J    &right_middy LCTRL K  &right_ring1 LALT L  &right_pinky LGUI SEMI  &none
+&none    &kp Z               &kp X                 &kp C                &lt LAYER_symbol V          &kp B        &deadkey   &lt LAYER_symbol M      &kp COMMA             &kp DOT              &kp FSLH                &none
+                                                   &mo LAYER_lower      &lt LAYER_navnum BACKSPACE  &kp SPACE    &kp SPACE  &lt LAYER_navnum ENTER  &none
             >;
         };
 
@@ -538,14 +543,14 @@
             >;
         };
 
-        raise_layer {
+        symbol_layer {
             // -----------------------------------------------------------------------------------------
             // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
             // | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
             // | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
-            display-name = "Raise";
+            display-name = "Symbols";
             bindings = <
  &none  &kp Y      &kp RA(N2)  &kp RA(N3)  &kp GRAVE      &kp EQUAL      &kp N6     &kp RA(E)  &kp N0     &kp N      &kp LS(EQUAL)  &none
  &none  &kp RA(X)  &kp N4      &kp N5      &kp RA(C)      &kp MINUS      &kp RA(Z)  &kp N7     &kp N8     &kp N9     &kp N1         &none
@@ -555,6 +560,7 @@
         };
 
         accents_layer {
+            display-name = "Accents";
             bindings = <
   &none   &a_circ    &u_circ    &i_circ  &o_circ                                    &kp RA(R)    &none                                         &none   &none   &none   &none   &none
   &none   &kp Z      &kp RA(S)  &kp W    &left_index_accents LAYER_cap_accents T    &e_circ      &none  &right_index_accents LAYER_cap_accents &none   &none   &none   &none   &none
@@ -564,6 +570,7 @@
         };
 
         cap_accents_layer {
+					            display-name = "Accents majuscules";
             bindings = <
   &none  &a_cap_circ     &u_cap_circ   &i_cap_circ   &o_cap_circ   &oe_cap       &none   &none   &none   &none   &none   &none
   &none  &a_grave_cap    &u_grave_cap  &e_acute_cap  &e_grave_cap  &e_cap_circ   &none   &none   &none   &none   &none   &none
@@ -572,6 +579,14 @@
             >;
         };
 
-        extra_3 { status = "reserved"; };
+        navnum_layer {
+					display-name = "Navnum";
+					bindings = <
+						&none &kp TAB     &kp HOME        &kp UP_ARROW    &kp END          &kp PG_UP             &kp KP_SLASH  &kp LS(N7)    &kp LS(N8)    &kp LS(N9)  &kp KP_MULTIPLY   &kp SCROLLLOCK
+						&none &kp CAPS    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp PG_DN             &kp KP_MINUS  &kp RS(N4)    &kp RS(N5)    &kp LS(N6)  &kp LS(N0)        &kp KP_PLUS
+						&none &kp K_APP   &none           &kp F11         &kp F12          &none                 &kp KP_COMMA  &kp RS(N1)    &kp RS(N2)    &kp RS(N3)  &kp KP_DOT        &none
+                                              &trans          &trans           &trans                &trans        &trans        &trans
+						>;
+				};
     };
 };
