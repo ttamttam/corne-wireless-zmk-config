@@ -11,8 +11,8 @@
 #define LAYER_default 0
 #define LAYER_lower 1
 #define LAYER_raise 2
-#define LAYER_extra_1 3
-#define LAYER_extra_2 4
+#define LAYER_accents 3
+#define LAYER_cap_accents 4
 #define LAYER_extra_3 5
 #define LAYER_mouse 6
 
@@ -344,6 +344,37 @@
             #binding-cells = <2>;
             bindings = <&kp>, <&kp>;
         };
+
+        deadkey: deadkey {
+		       compatible = "zmk,behavior-mod-morph";
+           #binding-cells = <0>;
+           bindings = <&sl LAYER_accents>, <&kp N3>;
+           mods = <(MOD_RALT)>;
+        };
+
+        right_index_accents: homey_right_index_accents {
+            compatible = "zmk,behavior-hold-tap";
+            flavor = RIGHT_INDEX_HOLDING_TYPE;
+            hold-trigger-key-positions = <LEFT_HAND_KEYS THUMB_KEYS>;
+            hold-trigger-on-release; // wait for other home row mods
+            tapping-term-ms = <RIGHT_INDEX_HOLDING_TIME>;
+            quick-tap-ms = <RIGHT_INDEX_REPEAT_DECAY>;
+            require-prior-idle-ms = <RIGHT_INDEX_STREAK_DECAY>;
+            #binding-cells = <2>;
+            bindings = <&mo>, <&kp>;
+        };
+
+        left_index_accents: homey_left_index_accents {
+            compatible = "zmk,behavior-hold-tap";
+            flavor = LEFT_INDEX_HOLDING_TYPE;
+            hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>;
+            hold-trigger-on-release; // wait for other home row mods
+            tapping-term-ms = <LEFT_INDEX_HOLDING_TIME>;
+            quick-tap-ms = <LEFT_INDEX_REPEAT_DECAY>;
+            require-prior-idle-ms = <LEFT_INDEX_STREAK_DECAY>;
+            #binding-cells = <2>;
+            bindings = <&mo>, <&kp>;
+         };
     };
 };
 
@@ -361,9 +392,9 @@
 
             display-name = "Base";
             bindings = <
-&kp TAB  &kp Q               &left_ring2 RALT W  &kp E                &kp R                     &kp T        &kp Y      &kp U                 &kp I                 &right_ring2 RALT O  &kp P                   &none
+&kp TAB  &kp Q               &left_ring2 RALT SQT  &kp E                &kp R                     &kp RBKT        &kp LBKT      &kp U                 &kp I                 &right_ring2 RALT O  &kp P                   &none
 &none    &left_pinky LGUI A  &left_ring1 LALT S  &left_middy LCTRL D  &left_index LEFT_SHIFT F  &kp G        &kp H      &right_index LSHFT J  &right_middy LCTRL K  &right_ring1 LALT L  &right_pinky LGUI SEMI  &none
-&none    &kp Z               &kp X               &kp C                &lt LAYER_raise V         &kp B        &kp N      &lt LAYER_raise M     &kp COMMA             &kp DOT              &kp FSLH                &none
+&none    &kp Z               &kp X               &kp C                &lt LAYER_raise V         &kp B        &deadkey      &lt LAYER_raise M     &kp COMMA             &kp DOT              &kp FSLH                &none
                                                  &mo LAYER_lower      &kp BACKSPACE             &kp SPACE    &kp SPACE  &kp ENTER             &none
             >;
         };
@@ -400,9 +431,23 @@
             >;
         };
 
-        extra_1 { status = "reserved"; };
+        accents_layer {
+            bindings = <
+  &none   &a_circ    &u_circ    &i_circ  &o_circ                                    &kp RA(R)    &none                                         &none   &none   &none   &none   &none
+  &none   &kp Z      &kp RA(S)  &kp W    &left_index_accents LAYER_cap_accents T    &e_circ      &none  &right_index_accents LAYER_cap_accents &none   &none   &none   &none   &none
+  &none   &kp BSLH   &none      &none    &none                                      &none        &none                                         &none   &none   &none   &none   &none
+                                 &none   &none   &none  &none   &none   &none
+            >;
+        };
 
-        extra_2 { status = "reserved"; };
+        cap_accents_layer {
+            bindings = <
+  &none  &a_cap_circ     &u_cap_circ   &i_cap_circ   &o_cap_circ   &oe_cap       &none   &none   &none   &none   &none   &none
+  &none  &a_grave_cap    &u_grave_cap  &e_acute_cap  &e_grave_cap  &e_cap_circ   &none   &none   &none   &none   &none   &none
+  &none  &c_cedilla_cap  &none         &none         &none         &none         &none   &none   &none   &none   &none   &none
+                         &none   &none   &none  &none   &none   &none
+            >;
+        };
 
         extra_3 { status = "reserved"; };
     };
