@@ -393,9 +393,9 @@
 
             display-name = "Raise";
             bindings = <
- &none   &kp Y   &kp RA(N2)    &kp RA(N3)      &kp GRAVE      &kp EQUAL &kp N6  &kp RA(E)     &kp N0      &kp N  &kp LS(EQUAL)  &none
- &none  &kp RA(X)      &kp N4      &kp N5      &kp RA(C)      &kp MINUS &kp RA(Z)     &kp N7     &kp N8     &kp N9         &kp N1   &none
- &none  &kp RA(B)  &kp RA(N4)  &kp RA(N5)  &kp RA(SPACE)  &kp RS(GRAVE)  &kp RA(Q)  &kp LS(Y)  &kp LS(G)  &kp LS(V)      &kp LS(N)   &none
+ &none  &kp Y      &kp RA(N2)  &kp RA(N3)  &kp GRAVE      &kp EQUAL      &kp N6     &kp RA(E)  &kp N0     &kp N      &kp LS(EQUAL)  &none
+ &none  &kp RA(X)  &kp N4      &kp N5      &kp RA(C)      &kp MINUS      &kp RA(Z)  &kp N7     &kp N8     &kp N9     &kp N1         &none
+ &none  &kp RA(B)  &kp RA(N4)  &kp RA(N5)  &kp RA(SPACE)  &kp RS(GRAVE)  &kp RA(Q)  &kp LS(Y)  &kp LS(G)  &kp LS(V)  &kp LS(N)      &none
                          &none   &none   &none  &none   &none   &none
             >;
         };
