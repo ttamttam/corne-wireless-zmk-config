@@ -192,11 +192,11 @@
 #define RIGHT_INDEX_STREAK_DECAY INDEX_STREAK_DECAY
 #define RIGHT_INDEX_REPEAT_DECAY INDEX_REPEAT_DECAY
 
-   	// Corne
+      // Corne
     //
-	  //      0  1  2  3  4  5           6  7  8  9 10 11
-    //      12 13 14 15 16 17 	      18 19 20 21 22 23
-    //      24 25 26 27 28 29		      30 31 32 33 34 35
+    //      0  1  2  3  4  5           6  7  8  9 10 11
+    //      12 13 14 15 16 17         18 19 20 21 22 23
+    //      24 25 26 27 28 29           30 31 32 33 34 35
     //                  36 37 38   39 40 41
 
     //
@@ -347,7 +347,7 @@
 
             display-name = "Base";
             bindings = <
-&kp TAB  &kp Q               &left_ring2 RALT W    &kp E                &kp R                       &kp T                        &kp Y                      &kp U                   &kp I                 &right_ring2 RALT O  &kp P                   &kp RBKT
+&kp TAB  &kp Q               &left_ring2 LALT W    &kp E                &kp R                       &kp T                        &kp Y                      &kp U                   &kp I                 &right_ring2 RALT O  &kp P                   &kp RBKT
 &kp ESC  &left_pinky LGUI A  &left_ring1 LALT S    &left_middy LCTRL D  &left_index LEFT_SHIFT F    &kp G                        &kp H                      &right_index LSHFT J    &right_middy LCTRL K  &right_ring1 LALT L  &right_pinky LGUI SEMI  &kp SQT
 &kp DEL  &kp Z               &kp X                 &kp C                &lt LAYER_symbol V          &kp B                        &kp N                      &lt LAYER_symbol M      &kp COMMA             &kp DOT              &kp FSLH                &kp LBKT
                                                    &mo LAYER_lower      &lt LAYER_navnum BACKSPACE  &lt LAYER_functions SPACE    &lt LAYER_functions SPACE  &lt LAYER_navnum ENTER  &none
@@ -379,7 +379,7 @@
 
             display-name = "Symbols";
             bindings = <
- &none  &kp Y      &kp RA(N2)  &kp RA(N3)  &kp GRAVE      &kp EQUAL      &kp N6     &kp RA(E)  &kp N0     &kp N      &kp LS(EQUAL)  &none
+ &none  &kp LT     &kp RA(N2)  &kp RA(N3)  &kp GRAVE      &kp EQUAL      &kp N6     &kp RA(E)  &kp N0     &kp N      &kp LS(EQUAL)  &none
  &none  &kp RA(X)  &kp N4      &kp N5      &kp RA(C)      &kp MINUS      &kp RA(Z)  &kp N7     &kp N8     &kp N9     &kp N1         &none
  &none  &kp RA(B)  &kp RA(N4)  &kp RA(N5)  &kp RA(SPACE)  &kp RS(GRAVE)  &kp RA(Q)  &kp LS(Y)  &kp LS(G)  &kp LS(V)  &kp LS(N)      &none
                                &none       &none          &none          &none      &none      &none
@@ -387,23 +387,23 @@
         };
 
         navnum_layer {
-					display-name = "Navnum";
-					bindings = <
-						&none &kp TAB     &kp HOME        &kp UP_ARROW    &kp END          &kp PG_UP             &kp KP_SLASH  &kp LS(N7)    &kp LS(N8)    &kp LS(N9)  &kp KP_MULTIPLY   &kp SCROLLLOCK
-						&none &kp CAPS    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp PG_DN             &kp KP_MINUS  &kp RS(N4)    &kp RS(N5)    &kp LS(N6)  &kp LS(N0)        &kp KP_PLUS
-						&none &kp K_APP   &none           &kp F11         &kp F12          &none                 &kp KP_COMMA  &kp RS(N1)    &kp RS(N2)    &kp RS(N3)  &kp KP_DOT        &none
+          display-name = "Navnum";
+          bindings = <
+            &none &kp TAB     &kp HOME        &kp UP_ARROW    &kp END          &kp PG_UP             &kp KP_SLASH  &kp LS(N7)    &kp LS(N8)    &kp LS(N9)  &kp KP_MULTIPLY   &kp KP_NUMLOCK
+            &none &kp CAPS    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp PG_DN             &kp KP_MINUS  &kp RS(N4)    &kp RS(N5)    &kp LS(N6)  &kp LS(N0)        &kp KP_PLUS
+            &none &kp K_APP   &none           &kp F11         &kp F12          &none                 &kp KP_COMMA  &kp RS(N1)    &kp RS(N2)    &kp RS(N3)  &kp KP_DOT        &kp KP_EQUAL
                                               &trans          &trans           &trans                &trans        &trans        &trans
-						>;
-				};
+            >;
+        };
 
-				fn_layer {
-						display-name = "Functions";
+        fn_layer {
+            display-name = "Functions";
             bindings = <
-  &none  &kp F1   &kp F2     &kp F3   &kp F4   &kp F5          &kp F6    &kp F7          &kp F8          &kp F9           &kp F10   &none
-  &none  &kp INS  &kp PSCRN  &none    &none    &none           &mkp MB4  &mmv MOVE_LEFT  &mmv MOVE_UP    &mmv MOVE_RIGHT  &mkp MB5  &msc SCRL_UP
-  &none  &none    &none      &kp F11  &kp F12  &none           &none     &mkp MB1        &mmv MOVE_DOWN  &mkp MB3         &mkp MB2  &msc SCRL_DOWN
-                             &none    &kp DEL  &none           &none     &kp ESC         &none
-							>;
+  &kp C_MUTE    &kp F1   &kp F2     &kp F3            &kp F4   &kp F5          &kp F6          &kp F7          &kp F8          &kp F9           &kp F10          &none
+  &kp C_VOL_UP  &kp INS  &kp PSCRN  &kp SCROLLLOCK    &none    &none           &msc SCRL_LEFT  &mmv MOVE_LEFT  &mmv MOVE_UP    &mmv MOVE_RIGHT  &msc SCRL_RIGHT  &msc SCRL_UP
+  &kp C_VOL_DN  &kp N2   &kp N3     &kp F11           &kp F12  &kp C_BRI_UP    &none           &mkp MB1        &mmv MOVE_DOWN  &mkp MB3         &mkp MB2         &msc SCRL_DOWN
+                                    &none             &kp DEL  &kp C_BRI_DN    &none           &kp ESC         &none
+              >;
         };
 
     };
