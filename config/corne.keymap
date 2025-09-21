@@ -46,7 +46,7 @@
 #define INDEX_HOLDING_TIME DIFFICULTY_THRESHOLD
 #endif
 
- behaviors {
+  behaviors {
 
      //////////////////////////////////////////////////////////////////////////
      //
@@ -192,7 +192,7 @@
 #define RIGHT_INDEX_STREAK_DECAY INDEX_STREAK_DECAY
 #define RIGHT_INDEX_REPEAT_DECAY INDEX_REPEAT_DECAY
 
-      // Corne
+    // Corne
     //
     //      0  1  2  3  4  5           6  7  8  9 10 11
     //      12 13 14 15 16 17         18 19 20 21 22 23
@@ -203,207 +203,237 @@
     // Home row mods with per-finger configuration settings
     //
 
-#define RIGHT_HAND_KEYS 6 7 8 9 10 11 18 19 21 20 23 22 30 31 32 33 34 35
+#define RIGHT_HAND_KEYS 6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35
 #define LEFT_HAND_KEYS 0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29
 #define LEFT_THUMB_KEYS 36 37 38
 #define RIGHT_THUMB_KEYS 39 40 41
 #define ALL_THUMB_KEYS LEFT_THUMB_KEYS RIGHT_THUMB_KEYS
 
-        left_pinky: homey_left_pinky {
-            compatible = "zmk,behavior-hold-tap";
-            flavor = LEFT_PINKY_HOLDING_TYPE;
-            hold-trigger-key-positions = <RIGHT_HAND_KEYS ALL_THUMB_KEYS>;
-            hold-trigger-on-release; // wait for other home row mods
-            tapping-term-ms = <LEFT_PINKY_HOLDING_TIME>;
-            quick-tap-ms = <LEFT_PINKY_REPEAT_DECAY>;
-            require-prior-idle-ms = <LEFT_PINKY_STREAK_DECAY>;
-            #binding-cells = <2>;
-            bindings = <&kp>, <&kp>;
-        };
-
-        right_pinky: homey_right_pinky {
-            compatible = "zmk,behavior-hold-tap";
-            flavor = RIGHT_PINKY_HOLDING_TYPE;
-            hold-trigger-key-positions = <LEFT_HAND_KEYS ALL_THUMB_KEYS>;
-            hold-trigger-on-release; // wait for other home row mods
-            tapping-term-ms = <RIGHT_PINKY_HOLDING_TIME>;
-            quick-tap-ms = <RIGHT_PINKY_REPEAT_DECAY>;
-            require-prior-idle-ms = <RIGHT_PINKY_STREAK_DECAY>;
-            #binding-cells = <2>;
-            bindings = <&kp>, <&kp>;
-        };
-
-        left_ring1: homey_left_ring1 {
-            compatible = "zmk,behavior-hold-tap";
-            flavor = LEFT_RING1_HOLDING_TYPE;
-            hold-trigger-key-positions = <RIGHT_HAND_KEYS ALL_THUMB_KEYS>;
-            hold-trigger-on-release; // wait for other home row mods
-            tapping-term-ms = <LEFT_RING1_HOLDING_TIME>;
-            quick-tap-ms = <LEFT_RING1_REPEAT_DECAY>;
-            require-prior-idle-ms = <LEFT_RING1_STREAK_DECAY>;
-            #binding-cells = <2>;
-            bindings = <&kp>, <&kp>;
-        };
-
-        right_ring1: homey_right_ring1 {
-            compatible = "zmk,behavior-hold-tap";
-            flavor = RIGHT_RING1_HOLDING_TYPE;
-            hold-trigger-key-positions = <LEFT_HAND_KEYS ALL_THUMB_KEYS>;
-            hold-trigger-on-release; // wait for other home row mods
-            tapping-term-ms = <RIGHT_RING1_HOLDING_TIME>;
-            quick-tap-ms = <RIGHT_RING1_REPEAT_DECAY>;
-            require-prior-idle-ms = <RIGHT_RING1_STREAK_DECAY>;
-            #binding-cells = <2>;
-            bindings = <&kp>, <&kp>;
-        };
-
-        left_ring2: homey_left_ring2 {
-            compatible = "zmk,behavior-hold-tap";
-            flavor = LEFT_RING2_HOLDING_TYPE;
-            hold-trigger-key-positions = <RIGHT_HAND_KEYS ALL_THUMB_KEYS>;
-            hold-trigger-on-release; // wait for other home row mods
-            tapping-term-ms = <LEFT_RING2_HOLDING_TIME>;
-            quick-tap-ms = <LEFT_RING2_REPEAT_DECAY>;
-            require-prior-idle-ms = <LEFT_RING2_STREAK_DECAY>;
-            #binding-cells = <2>;
-            bindings = <&kp>, <&kp>;
-        };
-
-        right_ring2: homey_right_ring2 {
-            compatible = "zmk,behavior-hold-tap";
-            flavor = RIGHT_RING2_HOLDING_TYPE;
-            hold-trigger-key-positions = <LEFT_HAND_KEYS ALL_THUMB_KEYS>;
-            hold-trigger-on-release; // wait for other home row mods
-            tapping-term-ms = <RIGHT_RING2_HOLDING_TIME>;
-            quick-tap-ms = <RIGHT_RING2_REPEAT_DECAY>;
-            require-prior-idle-ms = <RIGHT_RING2_STREAK_DECAY>;
-            #binding-cells = <2>;
-            bindings = <&kp>, <&kp>;
-        };
-
-        left_middy: homey_left_middy {
-            compatible = "zmk,behavior-hold-tap";
-            flavor =
-            LEFT_MIDDY_HOLDING_TYPE;
-            hold-trigger-key-positions = <RIGHT_HAND_KEYS ALL_THUMB_KEYS>;
-            hold-trigger-on-release; // wait for other home row mods
-            tapping-term-ms = <LEFT_MIDDY_HOLDING_TIME>;
-            quick-tap-ms = <LEFT_MIDDY_REPEAT_DECAY>;
-            require-prior-idle-ms = <LEFT_MIDDY_STREAK_DECAY>;
-            #binding-cells = <2>;
-            bindings = <&kp>, <&kp>;
-        };
-
-        right_middy: homey_right_middy {
-            compatible = "zmk,behavior-hold-tap";
-            flavor = RIGHT_MIDDY_HOLDING_TYPE;
-            hold-trigger-key-positions = <LEFT_HAND_KEYS ALL_THUMB_KEYS>;
-            hold-trigger-on-release; // wait for other home row mods
-            tapping-term-ms = <RIGHT_MIDDY_HOLDING_TIME>;
-            quick-tap-ms = <RIGHT_MIDDY_REPEAT_DECAY>;
-            require-prior-idle-ms = <RIGHT_MIDDY_STREAK_DECAY>;
-            #binding-cells = <2>;
-            bindings = <&kp>, <&kp>;
-        };
-
-        left_index: homey_left_index {
-            compatible = "zmk,behavior-hold-tap";
-            flavor = LEFT_INDEX_HOLDING_TYPE;
-            hold-trigger-key-positions = <RIGHT_HAND_KEYS ALL_THUMB_KEYS>;
-            hold-trigger-on-release; // wait for other home row mods
-            tapping-term-ms = <LEFT_INDEX_HOLDING_TIME>;
-            quick-tap-ms = <LEFT_INDEX_REPEAT_DECAY>;
-            require-prior-idle-ms = <LEFT_INDEX_STREAK_DECAY>;
-            #binding-cells = <2>;
-            bindings = <&kp>, <&kp>;
-        };
-
-        right_index: homey_right_index {
-            compatible = "zmk,behavior-hold-tap";
-            flavor = RIGHT_INDEX_HOLDING_TYPE;
-            hold-trigger-key-positions = <LEFT_HAND_KEYS ALL_THUMB_KEYS>;
-            hold-trigger-on-release; // wait for other home row mods
-            tapping-term-ms = <RIGHT_INDEX_HOLDING_TIME>;
-            quick-tap-ms = <RIGHT_INDEX_REPEAT_DECAY>;
-            require-prior-idle-ms = <RIGHT_INDEX_STREAK_DECAY>;
-            #binding-cells = <2>;
-            bindings = <&kp>, <&kp>;
-        };
-
+    left_pinky: homey_left_pinky {
+        compatible = "zmk,behavior-hold-tap";
+        flavor = LEFT_PINKY_HOLDING_TYPE;
+        hold-trigger-key-positions = <RIGHT_HAND_KEYS ALL_THUMB_KEYS>;
+        hold-trigger-on-release; // wait for other home row mods
+        tapping-term-ms = <LEFT_PINKY_HOLDING_TIME>;
+        quick-tap-ms = <LEFT_PINKY_REPEAT_DECAY>;
+        require-prior-idle-ms = <LEFT_PINKY_STREAK_DECAY>;
+        #binding-cells = <2>;
+        bindings = <&kp>, <&kp>;
     };
+
+    right_pinky: homey_right_pinky {
+        compatible = "zmk,behavior-hold-tap";
+        flavor = RIGHT_PINKY_HOLDING_TYPE;
+        hold-trigger-key-positions = <LEFT_HAND_KEYS ALL_THUMB_KEYS>;
+        hold-trigger-on-release; // wait for other home row mods
+        tapping-term-ms = <RIGHT_PINKY_HOLDING_TIME>;
+        quick-tap-ms = <RIGHT_PINKY_REPEAT_DECAY>;
+        require-prior-idle-ms = <RIGHT_PINKY_STREAK_DECAY>;
+        #binding-cells = <2>;
+        bindings = <&kp>, <&kp>;
+    };
+
+    left_ring1: homey_left_ring1 {
+        compatible = "zmk,behavior-hold-tap";
+        flavor = LEFT_RING1_HOLDING_TYPE;
+        hold-trigger-key-positions = <RIGHT_HAND_KEYS ALL_THUMB_KEYS>;
+        hold-trigger-on-release; // wait for other home row mods
+        tapping-term-ms = <LEFT_RING1_HOLDING_TIME>;
+        quick-tap-ms = <LEFT_RING1_REPEAT_DECAY>;
+        require-prior-idle-ms = <LEFT_RING1_STREAK_DECAY>;
+        #binding-cells = <2>;
+        bindings = <&kp>, <&kp>;
+    };
+
+    right_ring1: homey_right_ring1 {
+        compatible = "zmk,behavior-hold-tap";
+        flavor = RIGHT_RING1_HOLDING_TYPE;
+        hold-trigger-key-positions = <LEFT_HAND_KEYS ALL_THUMB_KEYS>;
+        hold-trigger-on-release; // wait for other home row mods
+        tapping-term-ms = <RIGHT_RING1_HOLDING_TIME>;
+        quick-tap-ms = <RIGHT_RING1_REPEAT_DECAY>;
+        require-prior-idle-ms = <RIGHT_RING1_STREAK_DECAY>;
+        #binding-cells = <2>;
+        bindings = <&kp>, <&kp>;
+    };
+
+    left_ring2: homey_left_ring2 {
+        compatible = "zmk,behavior-hold-tap";
+        flavor = LEFT_RING2_HOLDING_TYPE;
+        hold-trigger-key-positions = <RIGHT_HAND_KEYS ALL_THUMB_KEYS>;
+        hold-trigger-on-release; // wait for other home row mods
+        tapping-term-ms = <LEFT_RING2_HOLDING_TIME>;
+        quick-tap-ms = <LEFT_RING2_REPEAT_DECAY>;
+        require-prior-idle-ms = <LEFT_RING2_STREAK_DECAY>;
+        #binding-cells = <2>;
+        bindings = <&kp>, <&kp>;
+    };
+
+    right_ring2: homey_right_ring2 {
+        compatible = "zmk,behavior-hold-tap";
+        flavor = RIGHT_RING2_HOLDING_TYPE;
+        hold-trigger-key-positions = <LEFT_HAND_KEYS ALL_THUMB_KEYS>;
+        hold-trigger-on-release; // wait for other home row mods
+        tapping-term-ms = <RIGHT_RING2_HOLDING_TIME>;
+        quick-tap-ms = <RIGHT_RING2_REPEAT_DECAY>;
+        require-prior-idle-ms = <RIGHT_RING2_STREAK_DECAY>;
+        #binding-cells = <2>;
+        bindings = <&kp>, <&kp>;
+    };
+
+    left_middy: homey_left_middy {
+        compatible = "zmk,behavior-hold-tap";
+        flavor =
+        LEFT_MIDDY_HOLDING_TYPE;
+        hold-trigger-key-positions = <RIGHT_HAND_KEYS ALL_THUMB_KEYS>;
+        hold-trigger-on-release; // wait for other home row mods
+        tapping-term-ms = <LEFT_MIDDY_HOLDING_TIME>;
+        quick-tap-ms = <LEFT_MIDDY_REPEAT_DECAY>;
+        require-prior-idle-ms = <LEFT_MIDDY_STREAK_DECAY>;
+        #binding-cells = <2>;
+        bindings = <&kp>, <&kp>;
+    };
+
+    right_middy: homey_right_middy {
+        compatible = "zmk,behavior-hold-tap";
+        flavor = RIGHT_MIDDY_HOLDING_TYPE;
+        hold-trigger-key-positions = <LEFT_HAND_KEYS ALL_THUMB_KEYS>;
+        hold-trigger-on-release; // wait for other home row mods
+        tapping-term-ms = <RIGHT_MIDDY_HOLDING_TIME>;
+        quick-tap-ms = <RIGHT_MIDDY_REPEAT_DECAY>;
+        require-prior-idle-ms = <RIGHT_MIDDY_STREAK_DECAY>;
+        #binding-cells = <2>;
+        bindings = <&kp>, <&kp>;
+    };
+
+    left_index: homey_left_index {
+        compatible = "zmk,behavior-hold-tap";
+        flavor = LEFT_INDEX_HOLDING_TYPE;
+        hold-trigger-key-positions = <RIGHT_HAND_KEYS ALL_THUMB_KEYS>;
+        hold-trigger-on-release; // wait for other home row mods
+        tapping-term-ms = <LEFT_INDEX_HOLDING_TIME>;
+        quick-tap-ms = <LEFT_INDEX_REPEAT_DECAY>;
+        require-prior-idle-ms = <LEFT_INDEX_STREAK_DECAY>;
+        #binding-cells = <2>;
+        bindings = <&kp>, <&kp>;
+    };
+
+    right_index: homey_right_index {
+        compatible = "zmk,behavior-hold-tap";
+        flavor = RIGHT_INDEX_HOLDING_TYPE;
+        hold-trigger-key-positions = <LEFT_HAND_KEYS ALL_THUMB_KEYS>;
+        hold-trigger-on-release; // wait for other home row mods
+        tapping-term-ms = <RIGHT_INDEX_HOLDING_TIME>;
+        quick-tap-ms = <RIGHT_INDEX_REPEAT_DECAY>;
+        require-prior-idle-ms = <RIGHT_INDEX_STREAK_DECAY>;
+        #binding-cells = <2>;
+        bindings = <&kp>, <&kp>;
+    };
+  };
 };
 
 / {
-    keymap {
-        compatible = "zmk,keymap";
+  keymap {
+    compatible = "zmk,keymap";
 
-        default_layer {
-            // -----------------------------------------------------------------------------------------
-            // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  |  |
-            // |      |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  |
-            // |      |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  |  |
-            //                    | mo1 | BS  | Spc |   | Spc | Ent  |     |
+    // Corne
+    //      0  1  2  3  4  5           6  7  8  9 10 11
+    //      12 13 14 15 16 17         18 19 20 21 22 23
+    //      24 25 26 27 28 29         30 31 32 33 34 35
+    //                 36 37 38     39 40 41
 
-            display-name = "Base";
-            bindings = <
+    // Using BÉPO layout
+
+    default_layer {
+
+      //      ⭾  B  É  P  O  È          !  V  D  L  J  W
+      //      ⎋  A  U  I  E  ;          C  T  S  R  N  M
+      //      ⌦  À  Y  X  .  K          ’  Q  G  H  F  Z
+      //                 _  ⌫  ␣      ␣  ⏎  _
+      //
+      // Modifiers:  É, L: RALT     A, N: LGUI        U, R: LALT     I, S: LCTL         E, T: LSFT
+      // Layers:     ., q: symbol   key36: symbol     ⌫, ⏎: navnum   ␣, ␣: functions
+
+      display-name = "Base";
+      bindings = <
 &kp TAB  &kp Q               &left_ring2 RALT W    &kp E                &kp R                       &kp T                        &kp Y                      &kp U                   &kp I                 &right_ring2 RALT O  &kp P                   &kp RBKT
-&kp ESC  &left_pinky LGUI A  &left_ring1 LALT S    &left_middy LCTRL D  &left_index LEFT_SHIFT F    &kp G                        &kp H                      &right_index LSHFT J    &right_middy LCTRL K  &right_ring1 LALT L  &right_pinky LGUI SEMI  &kp SQT
+&kp ESC  &left_pinky LGUI A  &left_ring1 LALT S    &left_middy LCTL D   &left_index LSFT F          &kp G                        &kp H                      &right_index LSFT J     &right_middy LCTL K   &right_ring1 LALT L  &right_pinky LGUI SEMI  &kp SQT
 &kp DEL  &kp Z               &kp X                 &kp C                &lt LAYER_symbol V          &kp B                        &kp N                      &lt LAYER_symbol M      &kp COMMA             &kp DOT              &kp FSLH                &kp LBKT
                                                    &mo LAYER_lower      &lt LAYER_navnum BACKSPACE  &lt LAYER_functions SPACE    &lt LAYER_functions SPACE  &lt LAYER_navnum ENTER  &none
-            >;
-        };
+      >;
+    };
 
-        lower_layer {
-            // -----------------------------------------------------------------------------------------
-            // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
-            // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
-            // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
-            //                    | GUI |     | SPC |   | ENT |     | ALT |
+    lower_layer {
 
-            display-name = "Lower";
-            bindings = <
-&none       &none         &none         &none         &none         &none           &none   &none   &none   &none   &none  &none
+      // Lower Layer: Bluetooth
+      //
+      // First line: disconnect (Disconnect from the 0-indexed profile by number, if it's currently connected and inactive)
+			//
+      // Second line:
+			//    clear
+			//  & select (Select the 0-indexed profile by number)
+			//
+      //      _   0  1  2  3  4           _  _  _  _  _  _
+      //     clr  0  1  2  3  4           _  _  _  _  _  _
+      //      _   _  _  _  _  _           _  _  _  _  _  _
+      //                  _  _  _       _  _  _
+
+      display-name = "Lower";
+      bindings = <
+&none       &bt BT_DISC 0 &bt BT_DISC 1 &bt BT_DISC 2 &bt BT_DISC 3 &bt BT_DISC 4   &none   &none   &none   &none   &none  &none
 &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &none   &none   &none   &none   &none  &none
 &none       &none         &none         &none         &none         &none           &none   &none   &none   &none   &none  &none
                                         &none         &none         &none           &none   &none   &none
-            >;
-        };
+      >;
+    };
 
-        symbol_layer {
-            // -----------------------------------------------------------------------------------------
-            // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
-            // | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
-            // | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
-            //                    | GUI |     | SPC |   | ENT |     | ALT |
+    symbol_layer {
 
-            display-name = "Symbols";
+      //      _  ç  <  >  $  %          @  &  *  ’  `  _
+      //      _  {  (  )  }  =          \  +  -  /  "  _
+      //      _  ~  [  ]  _  #          |  !  ;  :  ?  _
+      //                 _  _  _       _  _  _
+
+      display-name = "Symbols";
             bindings = <
  &none  &kp BSLH   &kp RA(N2)  &kp RA(N3)  &kp GRAVE      &kp EQUAL      &kp N6     &kp RA(E)  &kp N0     &kp N      &kp LS(EQUAL)  &none
  &none  &kp RA(X)  &kp N4      &kp N5      &kp RA(C)      &kp MINUS      &kp RA(Z)  &kp N7     &kp N8     &kp N9     &kp N1         &none
  &none  &kp RA(B)  &kp RA(N4)  &kp RA(N5)  &kp RA(SPACE)  &kp RS(GRAVE)  &kp RA(Q)  &kp LS(Y)  &kp LS(G)  &kp LS(V)  &kp LS(N)      &none
                                &none       &none          &none          &none      &none      &none
-            >;
-        };
-
-        navnum_layer {
-          display-name = "Navnum";
-          bindings = <
-            &none &kp TAB     &kp HOME        &kp UP_ARROW    &kp END          &kp PG_UP             &kp KP_SLASH  &kp LS(N7)    &kp LS(N8)    &kp LS(N9)  &kp KP_MULTIPLY   &kp KP_NUMLOCK
-            &none &kp CAPS    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp PG_DN             &kp KP_MINUS  &kp RS(N4)    &kp RS(N5)    &kp LS(N6)  &kp LS(N0)        &kp KP_PLUS
-            &none &kp K_APP   &none           &kp F11         &kp F12          &none                 &kp KP_COMMA  &kp RS(N1)    &kp RS(N2)    &kp RS(N3)  &kp KP_DOT        &kp KP_EQUAL
-                                              &trans          &trans           &trans                &trans        &trans        &trans
-            >;
-        };
-
-        fn_layer {
-            display-name = "Functions";
-            bindings = <
-  &kp C_MUTE    &kp F1   &kp F2     &kp F3            &kp F4   &kp F5          &kp F6          &kp F7          &kp F8          &kp F9           &kp F10          &none
-  &kp C_VOL_UP  &kp INS  &kp PSCRN  &kp SCROLLLOCK    &none    &kp C_BRI_INC   &msc SCRL_LEFT  &mmv MOVE_LEFT  &mmv MOVE_UP    &mmv MOVE_RIGHT  &msc SCRL_RIGHT  &msc SCRL_UP
-  &kp C_VOL_DN  &kp N2   &kp N3     &kp F11           &kp F12  &kp C_BRI_DEC   &none           &mkp MB1        &mmv MOVE_DOWN  &mkp MB3         &mkp MB2         &msc SCRL_DOWN
-                                    &none             &kp DEL  &none           &none           &kp ESC         &none
-              >;
-        };
-
+      >;
     };
+
+    navnum_layer {
+
+      //      _  ⭾  ↖  ↑   ↖    ⇞       /  7  8  9  *  🔒
+      //      _  ⇪  ←  ↓   →    ⇟       -  4  5  6  0  +
+      //      _  ☰  _  F11 F12  _       ,  1  2  3  .  =
+      //                   _  ⌫   ␣   ␣  ⏎  _
+
+      display-name = "Navnum";
+      bindings = <
+&none &kp TAB     &kp HOME        &kp UP_ARROW    &kp END          &kp PG_UP             &kp KP_SLASH  &kp LS(N7)    &kp LS(N8)    &kp LS(N9)  &kp KP_MULTIPLY   &kp KP_NUMLOCK
+&none &kp CAPS    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp PG_DN             &kp KP_MINUS  &kp RS(N4)    &kp RS(N5)    &kp LS(N6)  &kp LS(N0)        &kp KP_PLUS
+&none &kp K_APP   &none           &kp F11         &kp F12          &none                 &kp KP_COMMA  &kp RS(N1)    &kp RS(N2)    &kp RS(N3)  &kp KP_DOT        &kp KP_EQUAL
+                                  &trans          &trans           &trans                &trans        &trans        &trans
+      >;
+    };
+
+    fn_layer {
+
+      //      🔇 F1 F2 F3  F4   F5           F6  F7 F8  F9 F10  _
+      //      🔊 ⎀  📸 📜   _    🔆           ⤎   ←  ↑  →   ⤏   ⭫
+      //      🔉 «  »  F11 F12  🔅           _  LMB  ↓  RMB MMB ⭭
+      //                  _    ⌦   _       _   ⎋  _
+
+      display-name = "Functions";
+      bindings = <
+ &kp C_MUTE    &kp F1   &kp F2     &kp F3            &kp F4   &kp F5          &kp F6          &kp F7          &kp F8          &kp F9           &kp F10          &none
+ &kp C_VOL_UP  &kp INS  &kp PSCRN  &kp SCROLLLOCK    &none    &kp C_BRI_INC   &msc SCRL_LEFT  &mmv MOVE_LEFT  &mmv MOVE_UP    &mmv MOVE_RIGHT  &msc SCRL_RIGHT  &msc SCRL_UP
+ &kp C_VOL_DN  &kp N2   &kp N3     &kp F11           &kp F12  &kp C_BRI_DEC   &none           &mkp MB1        &mmv MOVE_DOWN  &mkp MB3         &mkp MB2         &msc SCRL_DOWN
+                                   &none             &kp DEL  &none           &none           &kp ESC         &none
+      >;
+    };
+
+  };
 };
