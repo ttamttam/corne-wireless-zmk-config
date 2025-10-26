@@ -259,8 +259,7 @@
 
         left_ring2: homey_left_ring2 {
             compatible = "zmk,behavior-hold-tap";
-            flavor =
-            LEFT_RING2_HOLDING_TYPE;
+            flavor = LEFT_RING2_HOLDING_TYPE;
             hold-trigger-key-positions = <RIGHT_HAND_KEYS ALL_THUMB_KEYS>;
             hold-trigger-on-release; // wait for other home row mods
             tapping-term-ms = <LEFT_RING2_HOLDING_TIME>;
