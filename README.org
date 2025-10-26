@@ -1,0 +1,49 @@
+#+TITLE: My corne’s keyboard configuration
+
+In french, because I’m using [[https://bépo.fr][BÉPO]] keyboard configuration.
+
+J’utilise maintenant un corne 42 touches ([[./my_keymap.svg]]). J’ai une version sans
+fil basée sur des microcontrolleurs [[https://nicekeyboards.com/nice-nano/][Nice!Nano]], et donc sur [[https://zmk.dev/][ZMK]], avec des touches
+mécaniques dont la course est faible (Low Profile).
+
+Sur l’ordinateur, que ce soit sous Windows, Linux ou Android, j’utilise la
+disposition [[https://bépo.fr][BÉPO]]. Essentiellement parce que ça fait une vingtaine d’année que je
+l’utilise, et que j’ai vraiment la flemme d’apprendre [[https://ergol.org/][Ergo-L]], et parce que elle
+est maintenant disponible en standard à peu près partout.
+
+Du coup, pour pouvoir utiliser BÉPO avec beaucoup moins de touches qu’un clavier
+standard, j’ai du ruser un peu.
+
+En pratique les trois touches de gauches ne sont pas vraiment utilisées :
+j’utilise beaucoup plus souvent des combinaisons pour les remplacer. Les trois
+touches de droite, elles, le sont pour ~W~, ~M~ et ~Z~.
+
+J’utilise Home Row Mods (HRM). Ça concerne les 8 touches sous les doigts de
+repos, ainsi que deux touches supplémentaires situées sur la ligne juste
+au-dessus. Un appui court permet d’obtenir la touche normale. Un appui long ou
+combiné avec une autre touche permet d’obtenir : SHIFT, CTRL, ALT, TOUCHE
+WINDOWS ou RALT. C’est un système symétrique, ce qui explique que cela concerne
+10 touches.
+
+En plus de ça, j’ai installé des couches ZMK :
+
+- la couche « Lower » est anecdotique. Elle est déclenchée par la touche de pouce
+  la plus à gauche, et permet de gérer le Bluetooth : en gros de basculer entre
+  mes différents ordinateurs et mon téléphone ;
+
+- la couche « Symbols » vient de [[https://ergol.org/][Ergo-L]]. Elle est déclenchée par deux touches,
+  un peu de la même manière que les touches HRM ;
+
+- la couche « Navnum » est également adaptée de [[https://ergol.org/][Ergo-L]]. Elle est déclenchée par
+  des touches de pouces, et permet d’accéder à un pavé numérique, au touches de
+  déplacement, et quelques touches supplémentaires ;
+
+- enfin, la couche « Functions », également accessible depuis des touches de
+  pouces, permet d’accéder aux touches de fonctions, au réglage de contraste et
+  de volume, et à un pavé d’émulation de souris, qui me sert parfois, mais n’est
+  pas pratique d’utilisation.
+
+Un jour, je pense que je tenterai de faire évoluer mon firmware ZMK, de manière
+à passer en Ergo-L, mais sans modifier la disposition côté ordinateur, car elle
+me donne accès à tous les caractère dont j’ai besoin : je n’ai pas envie de
+perdre ça, et le fait que [[https://bépo.fr][BÉPO]] s’installe partout. J’espère que c’est possible…
