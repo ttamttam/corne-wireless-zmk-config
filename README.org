@@ -47,3 +47,10 @@ Un jour, je pense que je tenterai de faire évoluer mon firmware ZMK, de manièr
 à passer en Ergo-L, mais sans modifier la disposition côté ordinateur, car elle
 me donne accès à tous les caractère dont j’ai besoin : je n’ai pas envie de
 perdre ça, et le fait que [[https://bépo.fr][BÉPO]] s’installe partout. J’espère que c’est possible…
+
+Remarque : dans un autre dépôt, j’ai un script d’émulation [[https://github.com/jtroo/kanata][kanata]] : cela me
+permet de pouvoir utiliser mes portables lorsque je n’ai pas mon clavier sous la
+main. En gros, il y a un truc dont j’ai oublié le nom, qui permet d’aligner les
+touches un bas à gauche du clavier (c’est expliqué sur l’excellent site de
+[[https://ergol.org/][Ergo-L]]). Et en plus, j’ai émulé au mieux les différentes couches décrites
+ci-dessus. Faudrait que je ramène ce script dans ce dépôt-ci…
