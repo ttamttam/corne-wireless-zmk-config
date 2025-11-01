@@ -1,0 +1,134 @@
+;; Matt's config
+
+;; Meant to work with a BÉPO layout: officially available both on Linux and
+;; Windows® and gives access to enough characters for my own use, and beyond.
+
+(defcfg
+  process-unmapped-keys yes
+  tray-icon kanata-icon.svg																			 ;; used on windows
+	linux-dev /dev/input/by-path/platform-i8042-serio-0-event-kbd  ;; Only apply to my notebook internal keyboard
+)
+
+(defvar tap-time 300 hold-time 300)
+
+;; TODO:
+;; - advanced home row mode,
+;; - finish the ' dead key,
+
+(defalias
+  ;; m apo
+	;; z 【
+  ;; w 】
+
+	ç \
+
+  fn (tap-hold $tap-time $hold-time ␣ (layer-while-held fn))
+  é (tap-hold $tap-time $hold-time w ralt)
+  l (tap-hold $tap-time $hold-time o ralt)
+  a (tap-hold $tap-time $hold-time a lmet)
+  u (tap-hold $tap-time $hold-time s lalt)
+  i (tap-hold $tap-time $hold-time d lctl)
+  e (tap-hold $tap-time $hold-time f lsft)
+  t (tap-hold $tap-time $hold-time j rsft)
+  s (tap-hold $tap-time $hold-time k rctl)
+  r (tap-hold $tap-time $hold-time l lalt)
+  n (tap-hold $tap-time $hold-time ; lmet)
+
+  ⌫ (tap-hold $tap-time $hold-time ⌫ (layer-while-held numeric))
+  ⏎ (tap-hold $tap-time $hold-time ⏎ (layer-while-held numeric))
+	. (tap-hold $tap-time $hold-time v (layer-while-held symbol))
+	q (tap-hold $tap-time $hold-time m (layer-while-held symbol))
+	
+	^ RA-6
+	< RA-2
+  > RA-3
+	{ RA-x
+  } RA-c
+	~ RA-b
+	[ RA-4
+	] RA-5
+	_ RA-spc
+	$ grv
+	# S-grv
+	& RA-e
+	| RA-q
+	\ RA-z
+	! S-y
+	: S-v
+	? S-n
+	⎙ prnt
+	' (macro sldr 10 n)
+)
+
+;; SRC d’un qwerty
+;; (defsrc
+;;   `    1    2    3    4    5    6    7    8    9    0    -    =    ⌫
+;;   ⭾   q    w    e    r    t    y    u    i    o    p    [    ]    \
+;;   ⇪    a    s    d    f    g    h    j    k    l    ;    '    ⏎
+;;   ‹⇧   z    x    c    v    b    n    m    ,    .    /    ⇧›
+;;   ‹⎈ ‹⌘ ‹⌥           ␣            ⌥› ⌘› ⎈›
+;; )
+
+;; Je m’intéresse à un sous-ensemble:
+(defsrc
+ ⭾    q w  e  r  t  y  u  i  o  p  [
+ ⇪     a s  d  f  g  h  j  k  l  ;  '
+ ‹⇧  < z x  c  v  b  n  m  ,  .  /  ⇧›
+        ‹⌥  ␣   ⌥›
+)
+
+(deflayer (base 🖻 kanata-icon.svg)
+⭾ _  @é   _  _   _   _     _   _   @l  _  ]
+⎋ @a  @u  @i  @e  _   _    @t  @s  @r  @n  _
+⌦ z   x  c  @.  b  <  _  @q _  _ _  [
+           @⌫   @fn  @⏎
+)
+
+(deflayer (numeric 🖻 numeric.png)
+⭾  ⭾   ↖    ▲     ↘   ⇞         kp/ kp7 kp8 kp9 kp* ⇭
+⎋  ⇪   ◀    ▼     ▶   ⇟         kp- kp4 kp5 kp6 kp0 7
+⌦	 2   3    _     _   _     _   kp. kp1 kp2 kp3	v _
+            _  _  _
+)
+
+(deflayer symbol
+⭾ @^  @<   @>    @$     =       6  @&  0   n   S-= _
+⎋  @{  4    5     @}     -       @\  7  8   9   1  _
+⌦	 @~  @[   @]    @_     @#  _   @|  @! S-g @:  @? _
+            _  _  _
+)
+
+(deflayer fn
+🔇 f1 f2 f3 f4  f5    f6 f7 f8 f9 f10 _
+🔊 ⎀   ⎙  ⇳🔒 _  🔆     _  _  _  _  _   _
+🔉 2  3 f11 f12 🔅 _   _ _   _  _  _  _
+      ⌦ _ ⎋
+)
+
+(deffakekeys
+  è t	È S-t
+	ê	(macro y 10 f) Ê (macro y 10 S-f)
+  é w É S-w
+  à z	À S-z
+	â (macro y 10 a) Â (macro y 10 S-a)
+  ù RA-s Ù S-RA-s
+  ç \ Ç S-\
+	ß RA-k ẞ RA-S-k
+  quote (macro n))
+
+(defseq
+  è (n f)	È (n S-f)
+	é (n d)	É (n S-d)
+	ê (n g) Ê (n S-g)
+	à (n a)	À (n S-a)
+	â (n q) Â (n S-q)
+	ù (n s) Ù (n S-s)
+	ç (n h) Ç (n S-h)
+	ß (n k) ẞ (n S-k)
+  quote (n ␣))
+
+;; ⇪ ⎋ ‹⇧ ⇧› ‹⌥ ⌥› ⌫ ⌦   ▶ ▼ ▲ ◀ 【 】 ⎀ ⎙
+;; https://dev.to/shanu-kumawat/how-to-set-up-kanata-on-nixos-a-step-by-step-guide-1jk#roc
+;; https://github.com/jtroo/kanata/blob/main/parser/src/keys/mod.rs
+
+
