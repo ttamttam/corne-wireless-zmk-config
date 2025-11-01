@@ -5,6 +5,7 @@
 
 (defcfg
   process-unmapped-keys yes
+	windows-altgr cancel-lctl-press
   tray-icon kanata-icon.svg																			 ;; used on windows
 	linux-dev /dev/input/by-path/platform-i8042-serio-0-event-kbd  ;; Only apply to my notebook internal keyboard
 )
@@ -38,7 +39,7 @@
   ⏎ (tap-hold $tap-time $hold-time ⏎ (layer-while-held numeric))
 	. (tap-hold $tap-time $hold-time v (layer-while-held symbol))
 	q (tap-hold $tap-time $hold-time m (layer-while-held symbol))
-	
+
 	^ RA-6
 	< RA-2
   > RA-3
@@ -85,14 +86,14 @@
 )
 
 (deflayer (numeric 🖻 numeric.png)
-⭾  ⭾   ↖    ▲     ↘   ⇞         kp/ kp7 kp8 kp9 kp* ⇭
-⎋  ⇪   ◀    ▼     ▶   ⇟         kp- kp4 kp5 kp6 kp0 7
-⌦	 2   3    _     _   _     _   kp. kp1 kp2 kp3	v _
+⭾  ⭾   ↖    ▲     ↘   ⇞         kp/ S-7 S-8 S-9 kp* ⇭
+⎋  ⇪   ◀    ▼     ▶   ⇟         8 S-4 S-5 S-6 S-0 7
+⌦	 2   3    _     _   _     _    _ S-1 S-2 S-3	v _
             _  _  _
 )
 
 (deflayer symbol
-⭾ @^  @<   @>    @$     =       6  @&  0   n   S-= _
+⭾ @ç  @<   @>    @$     =       6  @&  0   n   S-= _
 ⎋  @{  4    5     @}     -       @\  7  8   9   1  _
 ⌦	 @~  @[   @]    @_     @#  _   @|  @! S-g @:  @? _
             _  _  _
