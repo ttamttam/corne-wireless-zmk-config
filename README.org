@@ -2,21 +2,24 @@
 
 In french, because I’m using [[https://bépo.fr][BÉPO]] keyboard configuration.
 
-J’utilise maintenant un corne 42 touches ([[./my_keymap.svg]]). J’ai une version sans
-fil basée sur des microcontrolleurs [[https://nicekeyboards.com/nice-nano/][Nice!Nano]], et donc sur [[https://zmk.dev/][ZMK]], avec des touches
-mécaniques dont la course est faible (Low Profile).
+J’utilise maintenant un corne 42 touches :
+[[./my_keymap.svg]]
+
+J’ai une version sans fil basée sur des microcontrolleurs [[https://nicekeyboards.com/nice-nano/][Nice!Nano]], et donc sur
+[[https://zmk.dev/][ZMK]], avec des touches mécaniques basses (Low Profile).
 
 Sur l’ordinateur, que ce soit sous Windows, Linux ou Android, j’utilise la
 disposition [[https://bépo.fr][BÉPO]]. Essentiellement parce que ça fait une vingtaine d’année que je
-l’utilise, et que j’ai vraiment la flemme d’apprendre [[https://ergol.org/][Ergo-L]], et parce que elle
+l’utilise, et que j’ai vraiment la flemme d’apprendre [[https://ergol.org/][Ergo-L]], et parce qu’elle
 est maintenant disponible en standard à peu près partout.
 
 Du coup, pour pouvoir utiliser BÉPO avec beaucoup moins de touches qu’un clavier
 standard, j’ai du ruser un peu.
 
-En pratique les trois touches de gauches ne sont pas vraiment utilisées :
-j’utilise beaucoup plus souvent des combinaisons pour les remplacer. Les trois
-touches de droite, elles, le sont pour ~W~, ~M~ et ~Z~.
+En pratique les trois touches de gauches ne sont pas vraiment utilisées ; même
+si j’ai quand même collé quelques touches dessus, j’utilise beaucoup plus
+souvent des combinaisons pour les atteindre. Les trois touches de droite, elles,
+le sont pour ~W~, ~M~ et ~Z~.
 
 J’utilise Home Row Mods (HRM). Ça concerne les 8 touches sous les doigts de
 repos, ainsi que deux touches supplémentaires situées sur la ligne juste
@@ -35,22 +38,25 @@ En plus de ça, j’ai installé des couches ZMK :
   un peu de la même manière que les touches HRM ;
 
 - la couche « Navnum » est également adaptée de [[https://ergol.org/][Ergo-L]]. Elle est déclenchée par
-  des touches de pouces, et permet d’accéder à un pavé numérique, au touches de
-  déplacement, et quelques touches supplémentaires ;
+  des touches de pouces, et permet d’accéder à un pavé numérique, aux touches de
+  déplacement et quelques touches supplémentaires ;
 
 - enfin, la couche « Functions », également accessible depuis des touches de
-  pouces, permet d’accéder aux touches de fonctions, au réglage de contraste et
-  de volume, et à un pavé d’émulation de souris, qui me sert parfois, mais n’est
-  pas pratique d’utilisation.
+  pouces, permet d’accéder aux touches de fonctions, aux réglages de contraste
+  et de volume, et à un pavé d’émulation de souris qui me sert très très
+  rarement, et n’est pas pratique.
 
 Un jour, je pense que je tenterai de faire évoluer mon firmware ZMK, de manière
 à passer en Ergo-L, mais sans modifier la disposition côté ordinateur, car elle
 me donne accès à tous les caractère dont j’ai besoin : je n’ai pas envie de
 perdre ça, et le fait que [[https://bépo.fr][BÉPO]] s’installe partout. J’espère que c’est possible…
 
-Remarque : dans un autre dépôt, j’ai un script d’émulation [[https://github.com/jtroo/kanata][kanata]] : cela me
-permet de pouvoir utiliser mes portables lorsque je n’ai pas mon clavier sous la
-main. En gros, il y a un truc dont j’ai oublié le nom, qui permet d’aligner les
-touches un bas à gauche du clavier (c’est expliqué sur l’excellent site de
-[[https://ergol.org/][Ergo-L]]). Et en plus, j’ai émulé au mieux les différentes couches décrites
-ci-dessus. Faudrait que je ramène ce script dans ce dépôt-ci…
+Dans le sous-répertoire ~kanata~, il y a un script d’émulation [[https://github.com/jtroo/kanata][kanata]] : cela me
+permet d’utiliser mes portables sans trop galérer lorsque je n’ai pas mon
+clavier sous la main. En gros, il y a un truc dont j’ai oublié le nom, qui
+permet d’aligner les touches en bas à gauche du clavier (c’est expliqué sur
+l’excellent site de [[https://ergol.org/][Ergo-L]]). Et en plus, j’ai émulé au mieux les différentes
+couches décrites ci-dessus.
+
+TODO: ajuster le script ~kanata~ pour que la touche RALT fonctionne correctement
+sous Windows (si c’est possible…).
